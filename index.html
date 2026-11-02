@@ -5,135 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C Programming</title>
     <style>
-        /* --- General Page Setup --- */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    margin: 25px auto;
-    max-width: 950px;
-    background-color: #f1f5f9;
-    color: #1e293b;
-    line-height: 1.6;
-    padding: 0 15px;
-}
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 25px auto;
+            max-width: 950px;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 0 15px;
+        }
 
-/* --- Header --- */
-header {
-    background-color: #0f172a;
-    color: #ffffff;
-    padding: 20px 24px;
-    border-radius: 8px;
-    margin-bottom: 25px;
-    border-left: 6px solid #2563eb;
-}
+        header {
+            background-color: #0f172a;
+            color: #ffffff;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 6px solid #2563eb;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 24px;
-    letter-spacing: 0.5px;
-}
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+        }
 
-/* --- Collapsible Accordion (details/summary) --- */
-details {
-    background-color: #ffffff;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    margin-bottom: 14px;
-    overflow: hidden;
-}
+        details {
+            background-color: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            margin-bottom: 14px;
+            overflow: hidden;
+        }
 
-summary {
-    background-color: #f8fafc;
-    padding: 14px 18px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #0f172a;
-    cursor: pointer;
-    user-select: none;
-    outline: none;
-    border-bottom: 1px solid transparent;
-}
+        summary {
+            background-color: #f8fafc;
+            padding: 14px 18px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #0f172a;
+            cursor: pointer;
+            user-select: none;
+            outline: none;
+            border-bottom: 1px solid transparent;
+        }
 
-summary:hover {
-    background-color: #f1f5f9;
-    color: #2563eb;
-}
+        summary:hover {
+            background-color: #f1f5f9;
+            color: #2563eb;
+        }
 
-details[open] summary {
-    background-color: #e2e8f0;
-    border-bottom: 1px solid #cbd5e1;
-    color: #1d4ed8;
-}
+        details[open] summary {
+            background-color: #e2e8f0;
+            border-bottom: 1px solid #cbd5e1;
+            color: #1d4ed8;
+        }
 
-/* --- Content & Question Blocks --- */
-.topic-content {
-    padding: 20px;
-    background-color: #ffffff;
-}
+        .topic-content {
+            padding: 20px;
+            background-color: #ffffff;
+        }
 
-.question-card {
-    border-bottom: 1px solid #e2e8f0;
-    padding-bottom: 20px;
-    margin-bottom: 24px;
-}
+        .question-card {
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
 
-.question-card:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
+        .question-card:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
 
-.question-title {
-    font-size: 15px;
-    font-weight: 600;
-    color: #0f172a;
-    margin: 0 0 10px 0;
-}
+        .question-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #0f172a;
+            margin: 0 0 10px 0;
+        }
 
-/* --- Badges for Code & Output --- */
-.label {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-top: 10px;
-    margin-bottom: 6px;
-    background-color: #e2e8f0;
-    color: #334155;
-}
+        .label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-bottom: 6px;
+            background-color: #e2e8f0;
+            color: #344155;
+        }
 
-/* --- Code & Terminal Boxes --- */
-pre {
-    background-color: #1e293b;
-    color: #f8fafc;
-    border: 1px solid #0f172a;
-    padding: 12px 16px;
-    font-family: "Consolas", "Courier New", monospace;
-    font-size: 13.5px;
-    line-height: 1.45;
-    overflow-x: auto;
-    white-space: pre;
-    margin: 0 0 12px 0;
-    border-radius: 6px;
-}
+        pre {
+            background-color: #1e293b;
+            color: #f8fafc;
+            border: 1px solid #0f172a;
+            padding: 12px 16px;
+            font-family: "Consolas", "Courier New", monospace;
+            font-size: 13.5px;
+            line-height: 1.45;
+            overflow-x: auto;
+            white-space: pre;
+            margin: 0 0 12px 0;
+            border-radius: 6px;
+        }
 
-/* Make Output look like a clean console window */
-.label:has(+ pre) {
-    margin-top: 8px;
-}
-
-/* --- Footer --- */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 15px;
-    border-top: 1px solid #cbd5e1;
-    font-size: 13px;
-    color: #64748b;
-   </style>
-
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid #cbd5e1;
+            font-size: 13px;
+            color: #64748b;
+        }
+    </style>
 </head>
 <body>
 
@@ -146,7 +134,7 @@ footer {
         <summary>1. Basic Input / Output (10 Questions)</summary>
         <div class="topic-content">
             <div class="question-card">
-                <div class="question-title">1. Write a program to print the message: Today I made my first C Program.[cite: 7]</div>
+                <div class="question-title">1. Write a program to print the message: Today I made my first C Program.</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -159,7 +147,7 @@ void main() {
             </div>
 
             <div class="question-card">
-                <div class="question-title">2. Write a program to read a character from the keyboard and display it on the screen.[cite: 7]</div>
+                <div class="question-title">2. Write a program to read a character from the keyboard and display it on the screen.</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -179,20 +167,20 @@ The character is: k</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">3. Write a program to print your name at the center of the first line.[cite: 7]</div>
+                <div class="question-title">3. Write a program to print your name at the center of the first line.</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
 void main() {
-    printf("\t\t\t\t\t         Sachin_Singh\n");
+    printf("\t\t\t\t\t        Sachin Singh\n");
     getch();
 }</pre>
                 <div class="label">Output:</div>
-                <pre>                                Sachin_Singh</pre>
+                <pre>                               Sachin Singh</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">4. Write a program to store a single quote and print that variable to show single quote on output screen.[cite: 7]</div>
+                <div class="question-title">4. Write a program to store a single quote and print that variable to show single quote on output screen.</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -208,7 +196,7 @@ void main() {
             </div>
 
             <div class="question-card">
-                <div class="question-title">5. Write a program for printing your name on output screen but your name should blink 5 times[cite: 7]</div>
+                <div class="question-title">5. Write a program for printing your name on output screen but your name should blink 5 times.</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -224,11 +212,11 @@ void main(){
     }
 }</pre>
                 <div class="label">Output:</div>
-                <pre>(Name blinks 5 times on screen)</pre>
+                <pre>(Name blinks 5 times)</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">6. Write the program to display this output: hello,welcome to c (5 sec delay)[cite: 7]</div>
+                <div class="question-title">6. Write the program to display this output: hello, welcome to c with 5-second delay.</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt; 
@@ -236,20 +224,20 @@ void main(){
 #include &lt;dos.h&gt; 
 void main () {
     clrscr(); 
-    printf("hello,welcome to c"); 
+    printf("hello, welcome to c"); 
     delay(5000);
 }</pre>
                 <div class="label">Output:</div>
-                <pre>hello,welcome to c</pre>
+                <pre>hello, welcome to c</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">7. Write a program to print your name at the center of the page ?[cite: 7]</div>
+                <div class="question-title">7. Write a program to print your name at the center of the page.</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
 void main(){
-    printf("\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t     Sachin");
+    printf("\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t     shivanshi");
 }</pre>
                 <div class="label">Output:</div>
                 <pre>
@@ -264,11 +252,11 @@ void main(){
 
 
 
-                                             Sachin Singh</pre>
+                                             shivanshi</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">8. Enter password display like ****** ?[cite: 7]</div>
+                <div class="question-title">8. Enter password display like ****** ?</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -285,7 +273,7 @@ pass is ******</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">9. Enter two character from user and print ASCII value ?[cite: 7]</div>
+                <div class="question-title">9. Enter two character from user and print ASCII value ?</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -303,7 +291,7 @@ ascii value is 120 and 121</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">10. Print all ASCII character 0 to 127 ?[cite: 7]</div>
+                <div class="question-title">10. Print all ASCII character 0 to 127 ?</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -324,7 +312,7 @@ void main(){
         <summary>2. Decision Control Structure (22 Questions)</summary>
         <div class="topic-content">
             <div class="question-card">
-                <div class="question-title">1. Write a program to enter the number from the user and check it is positive or negative or 0 (zero) ?[cite: 1]</div>
+                <div class="question-title">1. Write a program to enter the number from the user and check it is positive or negative or 0 (zero) ?</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -349,7 +337,7 @@ number is negative</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">2. Enter a number from user and check it is odd or even ?[cite: 1]</div>
+                <div class="question-title">2. Enter a number from user and check it is odd or even ?</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -371,7 +359,7 @@ number is even</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">3. Enter a number and check whether it is 1, 2, 3, 4, or 5 digits ?[cite: 1]</div>
+                <div class="question-title">3. Enter a number from the user and check that it is of 1 digit or 2 digit or 3 digit or 4 digit or 5 digit ?</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -402,7 +390,7 @@ number is of four digits</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">4. Grade check: 0-40 Fail, 40-60 C, 60-80 B, 80-100 A, else invalid[cite: 1]</div>
+                <div class="question-title">4. Grade check: 0-40 Fail, 40-60 C, 60-80 B, 80-100 A, else invalid</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -433,7 +421,7 @@ A GRADE</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">5. Check if number is decimal or not ?[cite: 1]</div>
+                <div class="question-title">5. Enter a number from the user and check it is a decimal number or not ?</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -457,7 +445,7 @@ it is a decimal number</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">6. Negative to positive and positive to negative converter[cite: 1]</div>
+                <div class="question-title">6. Negative to positive and positive to negative converter</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -481,7 +469,7 @@ negative is -2</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">7. Enter a character and check if it is an alphabet[cite: 1]</div>
+                <div class="question-title">7. Enter a character from the user and check that it is an alphabet ?</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -503,7 +491,7 @@ IS A CHARACTER</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">8. Square if negative, increment by 20 if positive[cite: 1]</div>
+                <div class="question-title">8. Square if negative, increment by 20 if positive</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -527,7 +515,7 @@ enter a number: 7
             </div>
 
             <div class="question-card">
-                <div class="question-title">9. Check if number is positive or negative[cite: 1]</div>
+                <div class="question-title">9. Check number is negative or positive</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -549,7 +537,7 @@ number is negative -45</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">10. Check greater of two numbers using ternary operator[cite: 1]</div>
+                <div class="question-title">10. Check greater of two numbers</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -569,7 +557,7 @@ enter second number: -10
             </div>
 
             <div class="question-card">
-                <div class="question-title">11. Check if number is divisible by 4 or not[cite: 1]</div>
+                <div class="question-title">11. Check if number is divisible by 4 or not</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -591,7 +579,7 @@ yes it is divisible by 4</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">12. Enter four characters and check if all four are equal[cite: 1]</div>
+                <div class="question-title">12. Enter four characters and check if all four are equal</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -611,7 +599,7 @@ All are equal.</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">13. Enter three numbers and check which is greater[cite: 1]</div>
+                <div class="question-title">13. Enter three numbers and check which is greater</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -635,7 +623,7 @@ greatest number is 3</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">14. Print months based on 28, 29, 30, or 31 days using switch[cite: 1]</div>
+                <div class="question-title">14. Print months based on 28, 29, 30, or 31 days using switch</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -671,7 +659,7 @@ dec</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">15. Enter one digit number from user and print in words[cite: 1]</div>
+                <div class="question-title">15. Enter one digit number from user and print in words</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -701,7 +689,7 @@ Seven</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">16. Enter two characters/numbers and check if same or print difference[cite: 1]</div>
+                <div class="question-title">16. Enter two characters/numbers and check if same or print difference</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -726,7 +714,7 @@ diff is: 1</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">17. Enter two digit number and print in words[cite: 1]</div>
+                <div class="question-title">17. Enter two digit number and print in words</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -763,7 +751,7 @@ oneZero</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">18. Check if character is uppercase, lowercase, number, or special character[cite: 1]</div>
+                <div class="question-title">18. Check if character is uppercase, lowercase, number, or special character</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -791,7 +779,7 @@ lower case alphabet</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">19. Check if year is a leap year[cite: 1]</div>
+                <div class="question-title">19. Check if year is a leap year</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -813,7 +801,7 @@ the year is not leap year</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">20. Enter date, month, year and check if valid date[cite: 1]</div>
+                <div class="question-title">20. Enter date, month, year and check if valid date</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -846,7 +834,7 @@ date is: 6-11-2025</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">21. Calculate age difference between current date and birth date[cite: 1]</div>
+                <div class="question-title">21. Calculate age difference between current date and birth date</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -876,7 +864,7 @@ difference = 18 years 6 months 15 days</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">22. Write a program to calculate area and perimeter of rectangle[cite: 1]</div>
+                <div class="question-title">22. Write a program to calculate area and perimeter of rectangle</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -904,7 +892,7 @@ perimeter is 12.000000</pre>
         <summary>3. Iterative Loops (24 Questions)</summary>
         <div class="topic-content">
             <div class="question-card">
-                <div class="question-title">1. Convert a number to binary[cite: 6]</div>
+                <div class="question-title">1. Convert a number to binary</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -927,7 +915,7 @@ binary is: 111</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">2. Check if number is divisible by any prime (2,3,5,7,11)[cite: 6]</div>
+                <div class="question-title">2. Check if number is divisible by any prime (2,3,5,7,11)</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -948,7 +936,7 @@ divisible by prime number</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">3. Check whether a number is prime or not[cite: 6]</div>
+                <div class="question-title">3. Check whether a number is prime or not</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -971,7 +959,7 @@ It is not a prime number</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">4. Print all digits of the number on separate lines[cite: 6]</div>
+                <div class="question-title">4. Print all digits of the number on separate lines</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -994,7 +982,7 @@ enter number: 123
             </div>
 
             <div class="question-card">
-                <div class="question-title">5. Print name 1 lakh times[cite: 6]</div>
+                <div class="question-title">5. Print name 1 lakh times</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1009,7 +997,7 @@ void main(){
             </div>
 
             <div class="question-card">
-                <div class="question-title">6. Print series 1 to 1 lakh[cite: 6]</div>
+                <div class="question-title">6. Print series 1 to 1 lakh</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1024,7 +1012,7 @@ void main(){
             </div>
 
             <div class="question-card">
-                <div class="question-title">7. Print series from 1 to N[cite: 6]</div>
+                <div class="question-title">7. Print series from 1 to N</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1039,11 +1027,15 @@ void main(){
                 <div class="label">Output:</div>
                 <pre>
 enter a number: 10
-1 2 3 4 5 6 7 8 9 10</pre>
+1
+2
+3
+...
+10</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">8. Print entered number 100 times[cite: 6]</div>
+                <div class="question-title">8. Print entered number 100 times</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1060,7 +1052,7 @@ void main(){
             </div>
 
             <div class="question-card">
-                <div class="question-title">9. Print all odd numbers between 1 to 100[cite: 6]</div>
+                <div class="question-title">9. Print all odd numbers between 1 to 100</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1077,7 +1069,7 @@ void main(){
             </div>
 
             <div class="question-card">
-                <div class="question-title">10. Print table of 4 up to 20[cite: 6]</div>
+                <div class="question-title">10. Print table of 4 up to 20</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1097,7 +1089,7 @@ void main(){
             </div>
 
             <div class="question-card">
-                <div class="question-title">11. Reverse a number[cite: 6]</div>
+                <div class="question-title">11. Reverse a number</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1119,7 +1111,7 @@ enter a number: 123
             </div>
 
             <div class="question-card">
-                <div class="question-title">12. Menu driven calculator loop[cite: 6]</div>
+                <div class="question-title">12. Menu driven calculator loop</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1149,7 +1141,7 @@ enter choice (1-add,2-sub,3-mul,4-div,5-mod,Q-quit): q</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">13. Check if number is palindrome[cite: 6]</div>
+                <div class="question-title">13. Check if number is palindrome</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1173,7 +1165,7 @@ not palindrome</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">14. Calculate base power result[cite: 6]</div>
+                <div class="question-title">14. Calculate base power result</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1196,7 +1188,7 @@ ans=256</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">15. Print first digit of number[cite: 6]</div>
+                <div class="question-title">15. Print first digit of number</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1216,7 +1208,7 @@ first digit=2</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">16. Print sum from 0 to that number[cite: 6]</div>
+                <div class="question-title">16. Print sum from 0 to that number</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1236,7 +1228,7 @@ total=7626</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">17. Find factorial of a number[cite: 6]</div>
+                <div class="question-title">17. Find factorial of a number</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1256,7 +1248,7 @@ fact=120</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">18. Print range from first number to second number[cite: 6]</div>
+                <div class="question-title">18. Print range from first number to second number</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1278,7 +1270,7 @@ enter second no: 5
             </div>
 
             <div class="question-card">
-                <div class="question-title">19. Enter password string up to 20 characters[cite: 6]</div>
+                <div class="question-title">19. Enter password string up to 20 characters</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1290,12 +1282,12 @@ void main(){
 }</pre>
                 <div class="label">Output:</div>
                 <pre>
-enter pass (press enter to exit): fghfgfhf
-pass entered: fghfgfhf</pre>
+enter pass (press enter to exit): secret123
+pass entered: secret123</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">20. Print counting 1 to 100 with 1-second delay[cite: 6]</div>
+                <div class="question-title">20. Print counting 1 to 100 with 1-second delay</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1312,7 +1304,7 @@ void main(){
             </div>
 
             <div class="question-card">
-                <div class="question-title">21. Fibonacci series up to 100[cite: 6]</div>
+                <div class="question-title">21. Fibonacci series up to 100</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1332,7 +1324,7 @@ void main(){
             </div>
 
             <div class="question-card">
-                <div class="question-title">22. Check if entered character is an alphabet[cite: 6]</div>
+                <div class="question-title">22. Check if entered character is an alphabet</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1352,7 +1344,7 @@ alphabet</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">23. Check palindrome number[cite: 6]</div>
+                <div class="question-title">23. Check palindrome number</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1378,7 +1370,7 @@ not palindrome</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">24. Check Armstrong number[cite: 6]</div>
+                <div class="question-title">24. Check Armstrong number</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1410,7 +1402,7 @@ not armstrong</pre>
         <summary>4. Single Dimension Array (13 Questions)</summary>
         <div class="topic-content">
             <div class="question-card">
-                <div class="question-title">1. Enter an array and display all values[cite: 2]</div>
+                <div class="question-title">1. Enter an array and display all values</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1434,7 +1426,7 @@ Printing array: 1 2 3 4 5</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">2. Enter array and print in reverse order[cite: 2]</div>
+                <div class="question-title">2. Enter array and print in reverse order</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1458,7 +1450,7 @@ Printing array in reverse: 5 4 3 2 1</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">3. Copy array into second array[cite: 2]</div>
+                <div class="question-title">3. Copy array into second array</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1485,7 +1477,7 @@ Printing copied array: 1 2 3 4 5</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">4. Copy array into another in reverse order[cite: 2]</div>
+                <div class="question-title">4. Copy array into another in reverse order</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1512,7 +1504,7 @@ Printing reverse copied array: 5 4 3 2 1</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">5. Print only even numbers in array[cite: 2]</div>
+                <div class="question-title">5. Print only even numbers in array</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1537,7 +1529,7 @@ Even numbers: 2 4</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">6. Print only positive numbers in array[cite: 2]</div>
+                <div class="question-title">6. Print only positive numbers in array</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1562,7 +1554,7 @@ Positive numbers: 1 3</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">7. Square all values in array[cite: 2]</div>
+                <div class="question-title">7. Square all values in array</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1589,7 +1581,7 @@ Squared array: 1 4 9 16 25</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">8. Print only odd numbers in array[cite: 2]</div>
+                <div class="question-title">8. Print only odd numbers in array</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1614,7 +1606,7 @@ Odd numbers: 1 3 5</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">9. Add all values of array[cite: 2]</div>
+                <div class="question-title">9. Add all values of array</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1637,7 +1629,7 @@ Sum of all values: 15</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">10. Linear search in array[cite: 2]</div>
+                <div class="question-title">10. Linear search in array</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1667,7 +1659,7 @@ Found</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">11. Sort array in ascending order[cite: 2]</div>
+                <div class="question-title">11. Sort array in ascending order</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1699,7 +1691,7 @@ Ascending order: 1 2 3 4 5</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">12. Find maximum value of array[cite: 2]</div>
+                <div class="question-title">12. Find maximum value of array</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1723,7 +1715,7 @@ Maximum value: 5</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">13. Find minimum value of array[cite: 2]</div>
+                <div class="question-title">13. Find minimum value of array</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1753,7 +1745,7 @@ Minimum value: 1</pre>
         <summary>5. Multi-Dimensional Array (5 Questions)</summary>
         <div class="topic-content">
             <div class="question-card">
-                <div class="question-title">1. Print 2x2 matrix[cite: 4]</div>
+                <div class="question-title">1. Print 2x2 matrix</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1782,7 +1774,7 @@ Matrix:
             </div>
 
             <div class="question-card">
-                <div class="question-title">2. Transpose 2x2 matrix[cite: 4]</div>
+                <div class="question-title">2. Transpose 2x2 matrix</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1812,7 +1804,7 @@ Transpose Matrix:
             </div>
 
             <div class="question-card">
-                <div class="question-title">3. Add two 2x2 matrices[cite: 4]</div>
+                <div class="question-title">3. Add two 2x2 matrices</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1844,7 +1836,7 @@ Sum Matrix:
             </div>
 
             <div class="question-card">
-                <div class="question-title">4. Subtract two 2x2 matrices[cite: 4]</div>
+                <div class="question-title">4. Subtract two 2x2 matrices</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1876,7 +1868,7 @@ Subtraction Matrix:
             </div>
 
             <div class="question-card">
-                <div class="question-title">5. Multiply two 2x2 matrices[cite: 4]</div>
+                <div class="question-title">5. Multiply two 2x2 matrices</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1918,7 +1910,7 @@ Multiplication Matrix:
         <summary>6. Strings (19 Questions)</summary>
         <div class="topic-content">
             <div class="question-card">
-                <div class="question-title">1. Convert string to uppercase[cite: 3]</div>
+                <div class="question-title">1. Convert string to uppercase</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1942,7 +1934,7 @@ Uppercase: HELLO WORLD</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">2. Convert string to lowercase[cite: 3]</div>
+                <div class="question-title">2. Convert string to lowercase</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1966,7 +1958,7 @@ Lowercase: sarahh</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">3. Convert string to sentence case[cite: 3]</div>
+                <div class="question-title">3. Convert string to sentence case</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -1991,7 +1983,7 @@ Sentence case: Abc. Abc</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">4. Convert string to title case[cite: 3]</div>
+                <div class="question-title">4. Convert string to title case</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2015,7 +2007,7 @@ Title case: Abc Def</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">5. Convert string to toggle case[cite: 3]</div>
+                <div class="question-title">5. Convert string to toggle case</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2037,7 +2029,7 @@ toggle: ABC abc</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">6. Find length of string[cite: 3]</div>
+                <div class="question-title">6. Find length of string</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2057,7 +2049,7 @@ Length: 5</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">7. Compare two strings[cite: 3]</div>
+                <div class="question-title">7. Compare two strings</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2081,7 +2073,7 @@ Both strings are different</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">8. Concatenate two strings[cite: 3]</div>
+                <div class="question-title">8. Concatenate two strings</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2103,7 +2095,7 @@ Final string: abcdef</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">9. Copy one string to another[cite: 3]</div>
+                <div class="question-title">9. Copy one string to another</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2122,7 +2114,7 @@ Copied string 2: hello</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">10. Print character at specified index or print out of bound[cite: 3]</div>
+                <div class="question-title">10. Print character at specified index or print out of bound</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2147,7 +2139,7 @@ e</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">11. Print each character in a new line[cite: 3]</div>
+                <div class="question-title">11. Print each character in a new line</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2168,7 +2160,7 @@ i</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">12. Copy reverse of string into another string[cite: 3]</div>
+                <div class="question-title">12. Copy reverse of string into another string</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2192,7 +2184,7 @@ Reverse string 2: olleh</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">13. Print difference between each character of two strings[cite: 3]</div>
+                <div class="question-title">13. Print difference between each character of two strings</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2214,7 +2206,7 @@ enter 2nd str: bye
             </div>
 
             <div class="question-card">
-                <div class="question-title">14. Check if character exists in string[cite: 3]</div>
+                <div class="question-title">14. Check if character exists in string</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2242,7 +2234,7 @@ exist</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">15. Print bound (index) of character if it exists[cite: 3]</div>
+                <div class="question-title">15. Print bound (index) of character if it exists</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2270,7 +2262,7 @@ bound 1</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">16. Count vowels in string[cite: 3]</div>
+                <div class="question-title">16. Count vowels in string</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2293,7 +2285,7 @@ Total vowels: 3</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">17. Print character on given bound number[cite: 3]</div>
+                <div class="question-title">17. Print character on given bound number</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2314,7 +2306,7 @@ Character: e</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">18. Check if string is palindrome[cite: 3]</div>
+                <div class="question-title">18. Check if string is palindrome</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2340,7 +2332,7 @@ That is a palindrome</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">19. Enter student record with details and 5 subject marks[cite: 3]</div>
+                <div class="question-title">19. Enter student record with details and 5 subject marks</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2378,7 +2370,7 @@ Submitted successfully.</pre>
         <summary>7. Structures (4 Questions)</summary>
         <div class="topic-content">
             <div class="question-card">
-                <div class="question-title">1. Employee structure with ID, Name, Designation in tabular format[cite: 5]</div>
+                <div class="question-title">1. Employee structure with ID, Name, Designation in tabular format</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2422,7 +2414,7 @@ int main() {
             </div>
 
             <div class="question-card">
-                <div class="question-title">2. Employee structure and print only names[cite: 5]</div>
+                <div class="question-title">2. Employee structure and print only names</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2449,7 +2441,7 @@ Employee 2. Name - bbb</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">3. Employee structure and print ID and Name in table format[cite: 5]</div>
+                <div class="question-title">3. Employee structure and print ID and Name in table format</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2483,7 +2475,7 @@ void main() {
             </div>
 
             <div class="question-card">
-                <div class="question-title">4. Student details sorted by roll number in ascending order[cite: 5]</div>
+                <div class="question-title">4. Student details sorted by roll number in ascending order</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -2498,6 +2490,7 @@ int main() {
     struct student stu[5], temp;
     int i, j;
     for (i = 0; i &lt; 5; i++) {
+        printf("Enter Roll, Name, Fee, DOB: ");
         scanf("%d %s %d %s", &amp;stu[i].roll, stu[i].name, &amp;stu[i].fee, stu[i].dob);
     }
     for (i = 0; i &lt; 4; i++) {
@@ -2530,7 +2523,9 @@ int main() {
         </div>
     </details>
 
-   <footer>
-    <p>Submitted by: Sachin Singh | BCA 1st Semester</p>
-   </body>
+    <footer>
+        <p>Submitted By : SACHIN SINGH | BCA I YEAR</p>
+    </footer>
+
+</body>
 </html>
