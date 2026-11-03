@@ -1,4 +1,311 @@
-<!-- TOPIC 2: OPERATORS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Practice Portal</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            max-width: 950px;
+            margin: 20px auto;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 0 15px;
+        }
+
+        header {
+            background-color: #0f172a;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 6px solid #2563eb;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+        }
+
+        details {
+            background-color: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            margin-bottom: 14px;
+            overflow: hidden;
+        }
+
+        summary {
+            background-color: #f8fafc;
+            padding: 14px 18px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #0f172a;
+            cursor: pointer;
+            user-select: none;
+            outline: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        summary:hover {
+            color: inherit;
+            background-color: #f1f5f9;
+        }
+
+        details[open] summary {
+            background-color: #e2e8f0;
+            border-bottom: 1px solid #cbd5e1;
+            color: #0f172a;
+        }
+
+        .topic-content {
+            padding: 20px;
+        }
+
+        .question-card {
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+
+        .question-card:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .question-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            color: #0f172a;
+        }
+
+        .label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-bottom: 6px;
+            background-color: #e2e8f0;
+            color: #344155;
+        }
+
+        pre {
+            background-color: #1e293b;
+            color: #f8fafc;
+            border: 1px solid #0f172a;
+            padding: 12px 16px;
+            font-family: "Consolas", "Courier New", monospace;
+            font-size: 13.5px;
+            line-height: 1.45;
+            overflow-x: auto;
+            white-space: pre;
+            margin: 0 0 12px 0;
+            border-radius: 6px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid #cbd5e1;
+            font-size: 13px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>C Programming Practice Questions</h1>
+    </header>
+
+    <!-- TOPIC 1 -->
+    <details>
+        <summary>1. Basic Input / Output (10 Questions)</summary>
+        <div class="topic-content">
+            <div class="question-card">
+                <div class="question-title">1. Write a program to print the message: Today I made my first C Program.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main() {
+    printf("Today I made my first C program.");
+    getch();
+}</pre>
+                <div class="label">Output:</div>
+                <pre>Today I made my first C program.</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">2. Write a program to read a character from the keyboard and display it on the screen.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() {
+    char ch;
+    clrscr();
+    printf("Type a character: ");
+    scanf("%c", &amp;ch);
+    printf("The character is: %c", ch);
+    getch();
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Type a character: k
+The character is: k</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">3. Write a program to print your name at the center of the first line.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main() {
+    printf("\t\t\t\t\t        Sachin Singh\n");
+    getch();
+}</pre>
+                <div class="label">Output:</div>
+                <pre>                                Sachin Singh</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">4. Write a program to store a single quote and print that variable to show single quote on output screen.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() {
+    char ch = '\'';
+    clrscr();
+    printf("Single quote is: %c", ch);
+    getch();
+}</pre>
+                <div class="label">Output:</div>
+                <pre>Single quote is: '</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">5. Write a program for printing your name on output screen but your name should blink 5 times.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main(){
+    int i;
+    for(i=1;i&lt;=5;i++){
+        printf("abc");
+        delay(500);
+        clrscr();
+        delay(500);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>(Name blinks 5 times)</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">6. Write the program to display this output: hello, welcome to c with 5-second delay.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt; 
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt; 
+void main () {
+    clrscr(); 
+    printf("hello, welcome to c"); 
+    delay(5000);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>hello, welcome to c</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">7. Write a program to print your name at the center of the page.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    printf("\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t     Sachin Singh");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+
+
+
+
+
+
+
+
+
+
+
+                                                Sachin Singh</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">8. Enter password display like ****** ?</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char a,b,c,d,e,f;
+    printf("enter password(6 word): ");
+    scanf("%c %c %c %c %c %c",&amp;a,&amp;b,&amp;c,&amp;d,&amp;e,&amp;f);
+    printf("pass is ******");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter password(6 word): 1 2 3 4 5 6
+pass is ******</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">9. Enter two character from user and print ASCII value ?</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char a;
+    char b;
+    printf("enter first character: ");
+    scanf("%c %c",&amp;a,&amp;b);
+    printf("ascii value is %d and %d",a,b);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter first character: x y
+ascii value is 120 and 121</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">10. Print all ASCII character 0 to 127 ?</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int i;
+    for(i=0;i&lt;=127;i++){
+        printf("%c\n",i);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>! " # $ % &amp; ' ( ) * + , - . / 0 1 2 ... A B C ... a b c ... ~</pre>
+            </div>
+        </div>
+    </details>
+
+    <!-- TOPIC 2 -->
     <details>
         <summary>2. Operators (11 Questions)</summary>
         <div class="topic-content">
@@ -87,7 +394,7 @@ THE VALUE OF Y: 5</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">5. Enter two number from the user and add the number and show the answer again take 2 number from user subtract the number and show the result again enter two no from the user and multiply the number and show the answer again enter two no from the user and divide the number and show the answer again enter two no from the user and find the remainder and show the answer ?</div>
+                <div class="question-title">5. Enter two numbers from the user and perform addition, subtraction, multiplication, division, and remainder operations ?</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -152,7 +459,7 @@ REMAINDER 0</pre>
             </div>
 
             <div class="question-card">
-                <div class="question-title">6. Write a program to enter a number from the user, the length of the number is depend on the user, programmer should print the last digit of the number?</div>
+                <div class="question-title">6. Write a program to enter a number from the user, the length of the number is dependent on the user, programmer should print the last digit of the number?</div>
                 <div class="label">Code:</div>
                 <pre>
 #include &lt;stdio.h&gt;
@@ -208,13 +515,13 @@ void main()
     clrscr();
     printf("Enter a number:");
     scanf("%lf",&amp;num);
-    double rounded_num= round(num);
+    double rounded_num = round(num);
     printf("Rounded number: %.0lf\n",rounded_num);
 }</pre>
                 <div class="label">Output:</div>
                 <pre>
-Enter a number: 12.6
-Rounded number: 13</pre>
+Enter a number: 15.6
+Rounded number: 16</pre>
             </div>
 
             <div class="question-card">
@@ -230,7 +537,7 @@ void main()
     clrscr();
     printf("Enter a lower case character:");
     scanf("%c",&amp;ch);
-    if(ch&gt;='a'&amp;&amp;ch&lt;='z')
+    if(ch&gt;='a' &amp;&amp; ch&lt;='z')
     {
         printf("Upper case character: %c\n",ch-32);
     }
@@ -239,8 +546,8 @@ void main()
 }</pre>
                 <div class="label">Output:</div>
                 <pre>
-Enter a lower case character: b
-Upper case character: B</pre>
+Enter a lower case character: a
+Upper case character: A</pre>
             </div>
 
             <div class="question-card">
@@ -270,10 +577,10 @@ void main()
                 <div class="label">Output:</div>
                 <pre>
 enter the marks of first subject:- 80
-enter the marks of second subject:- 75
-enter the marks of third subject:- 85
-enter the marks of fourth subject:- 90
-enter the marks of fifth subject:- 70
+enter the marks of second subject:- 70
+enter the marks of third subject:- 90
+enter the marks of fourth subject:- 85
+enter the marks of fifth subject:- 75
  the average is :80</pre>
             </div>
 
@@ -299,15 +606,1105 @@ void main()
 }</pre>
                 <div class="label">Output:</div>
                 <pre>
-Enter the principal rate: 5000
-Enter the rate of intrest: 4
+Enter the principal rate: 1000
+Enter the rate of intrest: 5
 Enter the time: 2
-The simple intrest is: 400.000000</pre>
+The simple intrest is: 100.000000</pre>
             </div>
         </div>
     </details>
 
-    <!-- TOPIC 5: NESTED LOOPS -->
+    <!-- TOPIC 3 -->
+    <details>
+        <summary>3. Decision Control Structure (22 Questions)</summary>
+        <div class="topic-content">
+            <div class="question-card">
+                <div class="question-title">1. Write a program to enter the number from the user and check it is positive or negative or 0 (zero) ?</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int i;
+    printf("enter number: ");
+    scanf("%d",&amp;i);
+    if(i&lt;0){
+        printf("number is negative");
+    }
+    else if(i&gt;0){
+        printf("number is positive");
+    }
+    else{
+        printf("no is zero");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter number: -55
+number is negative</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">2. Enter a number from user and check it is odd or even ?</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x;
+    printf("enter number: ");
+    scanf("%d",&amp;x);
+    if(x%2==0){
+        printf("number is even");
+    }
+    else{
+        printf("number is odd");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter number: 264
+number is even</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">3. Enter a number from the user and check that it is of 1 digit or 2 digit or 3 digit or 4 digit or 5 digit ?</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x;
+    printf("enter number: ");
+    scanf("%d",&amp;x);
+    if(x&gt;=-9&amp;&amp;x&lt;=9){
+        printf("number is of one digit");
+    }
+    else if(x&gt;=-99&amp;&amp;x&lt;=99){
+        printf("number is of two digits");
+    }
+    else if(x&gt;=-999&amp;&amp;x&lt;=999){
+        printf("number is of three digits");
+    }
+    else if(x&gt;=-9999&amp;&amp;x&lt;=9999){
+        printf("number is of four digits");
+    }
+    else if(x&gt;=-99999&amp;&amp;x&lt;=99999){
+        printf("number is of five digits");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter number: 6543
+number is of four digits</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">4. Grade check: 0-40 Fail, 40-60 C, 60-80 B, 80-100 A, else invalid</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x;
+    printf("enter marks: ");
+    scanf("%d",&amp;x);
+    if(x&gt;=0&amp;&amp;x&lt;=40){
+        printf("FAIL");
+    }
+    else if(x&gt;40&amp;&amp;x&lt;=60){
+        printf("C GRADE");
+    }
+    else if(x&gt;60&amp;&amp;x&lt;=80){
+        printf("B GRADE");
+    }
+    else if(x&gt;80&amp;&amp;x&lt;=100){
+        printf("A GRADE");
+    }
+    else{
+        printf("INVALID");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter marks: 90
+A GRADE</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">5. Enter a number from the user and check it is a decimal number or not ?</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x;
+    float y;
+    printf("enter number: ");
+    scanf("%f",&amp;y);
+    x=y;
+    if(x-y==0){
+        printf("it is not a decimal number");
+    }
+    else{
+        printf("it is a decimal number");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter number: 12.6
+it is a decimal number</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">6. Negative to positive and positive to negative converter</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x;
+    printf("enter a number: ");
+    scanf("%d",&amp;x);
+    if(x&gt;=0){
+        x=-x;
+        printf("negative is %d",x);
+    }
+    else{
+        x=-x;
+        printf("positive is %d",x);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter a number: 2
+negative is -2</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">7. Enter a character from the user and check that it is an alphabet ?</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char x;
+    printf("enter character: ");
+    scanf("%c",&amp;x);
+    if((x&gt;='a'&amp;&amp;x&lt;='z')||(x&gt;='A'&amp;&amp;x&lt;='Z')){
+        printf("IS A CHARACTER");
+    }
+    else{
+        printf("NOT A CHARACTER");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter character: A
+IS A CHARACTER</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">8. Square if negative, increment by 20 if positive</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x;
+    printf("enter a number: ");
+    scanf("%d",&amp;x);
+    if(x&gt;=0){
+        x+=20;
+        printf("(20 increment) %d ",x);
+    }
+    else{
+        x=x*x;
+        printf("square is %d",x);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter a number: 7
+(20 increment) 27</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">9. Check number is negative or positive</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x;
+    printf("enter a number: ");
+    scanf("%d",&amp;x);
+    if(x&gt;=0){
+         printf("number is positive %d ",x);
+    }
+    else{
+        printf("number is negative %d",x);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter a number: -45
+number is negative -45</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">10. Check greater of two numbers</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x,y;
+    printf("enter number: ");
+    scanf("%d",&amp;x);
+    printf("enter second number: ");
+    scanf("%d",&amp;y);
+    x&gt;y?printf("%d is greater",x):printf("%d is greater",y);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter number: 10
+enter second number: -10
+10 is greater</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">11. Check if number is divisible by 4 or not</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x;
+    printf("enter number: ");
+    scanf("%d",&amp;x);
+    if(x%4==0){
+        printf("yes it is divisible by 4");
+    }
+    else{
+        printf("not divisible by 4");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter number: 4
+yes it is divisible by 4</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">12. Enter four characters and check if all four are equal</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char a,b,c,d;
+    printf("enter character: ");
+    scanf("%c %c %c %c",&amp;a,&amp;b,&amp;c,&amp;d);
+    if (a == b &amp;&amp; b == c &amp;&amp; c == d)
+        printf("All are equal.\n");
+    else
+        printf("They are not equal.\n");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter character: aaaa
+All are equal.</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">13. Enter three numbers and check which is greater</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x,y,z,a;
+    printf("enter 1st number: ");
+    scanf("%d",&amp;x);
+    printf("enter 2nd number: ");
+    scanf("%d",&amp;y);
+    printf("enter 3rd number: ");
+    scanf("%d",&amp;z);
+    a=x&gt;y?(x&gt;z?x:z):y&gt;z?y:z;
+    printf("greatest number is %d",a);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter 1st number: 1
+enter 2nd number: 2
+enter 3rd number: 3
+greatest number is 3</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">14. Print months based on 28, 29, 30, or 31 days using switch</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x;
+    printf("enter number(days): ");
+    scanf("%d",&amp;x);
+    switch (x){
+        case 29:
+        case 28:
+            printf("feb");
+            break;
+        case 31:
+            printf("jan \nmarch\nmay\njuly\naugust\noct\ndec");
+            break;
+        case 30:
+            printf("april\njun\nsep\nnov");
+            break;
+        default:
+            printf("invalid");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter number(days): 31
+jan 
+march
+may
+july
+august
+oct
+dec</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">15. Enter one digit number from user and print in words</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main() {
+    int num;
+    printf("Enter a one digit number (0-9): ");
+    scanf("%d", &amp;num);
+
+    switch(num) {
+        case 0: printf("Zero"); break;
+        case 1: printf("One"); break;
+        case 2: printf("Two"); break;
+        case 3: printf("Three"); break;
+        case 4: printf("Four"); break;
+        case 5: printf("Five"); break;
+        case 6: printf("Six"); break;
+        case 7: printf("Seven"); break;
+        case 8: printf("Eight"); break;
+        case 9: printf("Nine"); break;
+        default: printf("Invalid input!");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter a one digit number (0-9): 7
+Seven</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">16. Enter two characters/numbers and check if same or print difference</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x,y,c;
+    printf("enter number: ");
+    scanf("%d",&amp;x);
+    printf("enter number: ");
+    scanf("%d",&amp;y);
+    if(x==y){
+        printf("both are same");
+    }else{
+        c=x-y;
+        printf("diff is: %d",c);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter number: 2
+enter number: 1
+diff is: 1</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">17. Enter two digit number and print in words</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char x,y;
+    printf("enter two digit number: ");
+    scanf("%c%c",&amp;x,&amp;y);
+    if(x=='0') printf("Zero");
+    else if(x=='1') printf("one");
+    else if(x=='2') printf("two");
+    else if(x=='3') printf("three");
+    else if(x=='4') printf("four");
+    else if(x=='5') printf("five");
+    else if(x=='6') printf("six");
+    else if(x=='7') printf("seven");
+    else if(x=='8') printf("eight");
+    else if(x=='9') printf("nine");
+
+    if(y=='0') printf("Zero");
+    else if(y=='1') printf("one");
+    else if(y=='2') printf("two");
+    else if(y=='3') printf("three");
+    else if(y=='4') printf("four");
+    else if(y=='5') printf("five");
+    else if(y=='6') printf("six");
+    else if(y=='7') printf("seven");
+    else if(y=='8') printf("eight");
+    else if(y=='9') printf("nine");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter two digit number: 10
+oneZero</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">18. Check if character is uppercase, lowercase, number, or special character</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char x;
+    printf("enter any character: ");
+    scanf("%c",&amp;x);
+    if(x&gt;='a'&amp;&amp;x&lt;='z'){
+        printf("lower case alphabet");
+    }
+    else if(x&gt;='A'&amp;&amp;x&lt;='Z'){
+        printf("upper case alphabet");
+    }
+    else if(x&gt;='0'&amp;&amp;x&lt;='9'){
+        printf("number");
+    }
+    else{
+        printf("special characters");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter any character: a
+lower case alphabet</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">19. Check if year is a leap year</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x;
+    printf("enter the year: ");
+    scanf("%d",&amp;x);
+    if(x%4==0){
+        printf("the year is leap year");
+    }
+    else{
+        printf("the year is not leap year");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter the year: 2025
+the year is not leap year</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">20. Enter date, month, year and check if valid date</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int d,y,m;
+    printf("enter date: ");
+    scanf("%d",&amp;d);
+    printf("enter month: ");
+    scanf("%d",&amp;m);
+    printf("enter year: ");
+    scanf("%d",&amp;y);
+    if(d&gt;31){
+        printf("invalid date");
+    }else if(m&gt;12){
+        printf("invalid month");
+    }
+    else if(y&gt;2025){
+        printf("invalid year");
+    }
+    else{
+        printf("date is: %d-%d-%d",d,m,y);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter date: 06   
+enter month: 11
+enter year: 2025
+date is: 6-11-2025</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">21. Calculate age difference between current date and birth date</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int cd, cm, cy, bd, bm, by;
+    printf("Enter current date (dd mm yyyy): ");
+    scanf("%d %d %d", &amp;cd, &amp;cm, &amp;cy);
+    printf("Enter birth date (dd mm yyyy): ");
+    scanf("%d %d %d", &amp;bd, &amp;bm, &amp;by);
+
+    if (cd &lt; bd) { 
+        cd += 30;
+        cm--; 
+    }
+    if (cm &lt; bm) { 
+        cm += 12;
+        cy--; 
+    }
+
+    printf("difference = %d years %d months %d days\n", cy - by, cm - bm, cd - bd);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter current date (dd mm yyyy): 06 11 2025
+Enter birth date (dd mm yyyy): 21 04 2007
+difference = 18 years 6 months 15 days</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">22. Write a program to calculate area and perimeter of rectangle</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    float l,b;
+    printf("enter length: ");
+    scanf("%f",&amp;l);
+    printf("enter width: ");
+    scanf("%f",&amp;b);
+    printf("area is %f\n",l*b);
+    printf("perimeter is %f",2*(l+b));
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter length: 4
+enter width: 2
+area is 8.000000
+perimeter is 12.000000</pre>
+            </div>
+        </div>
+    </details>
+
+    <!-- TOPIC 4 -->
+    <details>
+        <summary>4. Iterative Loops (24 Questions)</summary>
+        <div class="topic-content">
+            <div class="question-card">
+                <div class="question-title">1. Convert a number to binary</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+   int x, r, a=1, b=0;
+   printf("enter number: ");
+   scanf("%d",&amp;x);
+   while(x&gt;0){
+       r=x%2;
+       b=b+r*a;
+       x=x/2;
+       a=a*10;
+   }
+   printf("binary is: %d",b);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter number: 7
+binary is: 111</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">2. Check if number is divisible by any prime (2,3,5,7,11)</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x;
+    printf("enter number: ");
+    scanf("%d",&amp;x);
+    if(x%2==0||x%3==0||x%5==0||x%7==0||x%11==0){
+        printf("divisible by prime number");
+    } else {
+        printf("not divisible by prime number");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter number: 14
+divisible by prime number</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">3. Check whether a number is prime or not</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x,i,y=0;
+    printf("Enter number: ");
+    scanf("%d",&amp;x);
+    for(i=1;i&lt;=x;i++) {
+        if (x%i==0) y++;
+    }
+    if (y==2)
+        printf("It is a prime number");
+    else
+        printf("It is not a prime number");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter number: 1
+It is not a prime number</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">4. Print all digits of the number on separate lines</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x,y;
+    printf("enter number: ");
+    scanf("%d",&amp;x);
+    while(x&gt;0){
+        y=x%10;
+        printf("%d\n",y);
+        x=x/10;
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter number: 123
+3
+2
+1</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">5. Print name 1 lakh times</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int i;
+    for(i=1;i&lt;=100000;i++){
+        printf("priyanshi ");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>priyanshi x1 lakh times</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">6. Print series 1 to 1 lakh</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int i;
+    for(i=1;i&lt;=100000;i++){
+        printf("%d ",i);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>1 2 3 ... 100000</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">7. Print series from 1 to N</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x,i;
+    printf("enter a number: ");
+    scanf("%d",&amp;x);
+    for(i=1;i&lt;=x;i++){
+        printf("%d\n",i);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter a number: 10
+1
+2
+3
+...
+10</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">8. Print entered number 100 times</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x,i;
+    printf("enter a number: ");
+    scanf("%d",&amp;x);
+    for(i=1;i&lt;=100;i++){
+        printf("%d\n",x);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>1 (printed 100 times)</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">9. Print all odd numbers between 1 to 100</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int i;
+    for(i=1;i&lt;=100;i++){
+        if(i%2!=0){
+            printf("%d\n",i);
+        }
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>1 3 5 ... 99</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">10. Print table of 4 up to 20</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int i,a;
+    for(i=1;i&lt;=20;i++){
+        a=4*i;
+        printf("4*%d=%d\n",i,a);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+4*1=4
+4*2=8
+...
+4*20=80</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">11. Reverse a number</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x,i=0,y;
+    printf("enter a number: ");
+    scanf("%d",&amp;x);
+    while(x&gt;0){
+        y=x%10;
+        i=i*10+y;
+        x=x/10;
+    }
+    printf("%d",i);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter a number: 123
+321</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">12. Menu driven calculator loop</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char ch;
+    int a,b;
+    while(1){
+        printf("enter choice (1-add,2-sub,3-mul,4-div,5-mod,Q-quit): ");
+        scanf(" %c",&amp;ch);
+        if(ch=='Q'||ch=='q') break;
+        printf("enter 2 no: ");
+        scanf("%d%d",&amp;a,&amp;b);
+        if(ch=='1') printf("add=%d\n",a+b);
+        else if(ch=='2') printf("sub=%d\n",a-b);
+        else if(ch=='3') printf("mul=%d\n",a*b);
+        else if(ch=='4') printf("div=%d\n",a/b);
+        else if(ch=='5') printf("mod=%d\n",a%b);
+        else printf("invalid\n");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter choice (1-add,2-sub,3-mul,4-div,5-mod,Q-quit): 1
+enter 2 no: 2 2
+add=4
+enter choice (1-add,2-sub,3-mul,4-div,5-mod,Q-quit): q</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">13. Check if number is palindrome</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int n,r,s=0,t;
+    printf("enter no: ");
+    scanf("%d",&amp;n);
+    t=n;
+    while(n&gt;0){
+        r=n%10;
+        s=s*10+r;
+        n=n/10;
+    }
+    if(t==s) printf("palindrome");
+    else printf("not palindrome");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter no: 133
+not palindrome</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">14. Calculate base power result</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int b,p,i,r=1;
+    printf("enter base: ");
+    scanf("%d",&amp;b);
+    printf("enter power: ");
+    scanf("%d",&amp;p);
+    for(i=1;i&lt;=p;i++){
+        r=r*b;
+    }
+    printf("ans=%d",r);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter base: 2
+enter power: 8
+ans=256</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">15. Print first digit of number</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int n;
+    printf("enter no: ");
+    scanf("%d",&amp;n);
+    while(n&gt;=10){
+        n=n/10;
+    }
+    printf("first digit=%d",n);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter no: 2007
+first digit=2</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">16. Print sum from 0 to that number</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int n,i,s=0;
+    printf("enter no: ");
+    scanf("%d",&amp;n);
+    for(i=0;i&lt;=n;i++){
+        s=s+i;
+    }
+    printf("total=%d",s);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter no: 123
+total=7626</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">17. Find factorial of a number</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int n,i,f=1;
+    printf("enter no: ");
+    scanf("%d",&amp;n);
+    for(i=1;i&lt;=n;i++){
+        f=f*i;
+    }
+    printf("fact=%d",f);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter no: 5
+fact=120</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">18. Print range from first number to second number</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int a,b,i;
+    printf("enter first no: ");
+    scanf("%d",&amp;a);
+    printf("enter second no: ");
+    scanf("%d",&amp;b);
+    for(i=a;i&lt;=b;i++){
+        printf("%d ",i);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter first no: 1
+enter second no: 5
+1 2 3 4 5</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">19. Enter password string up to 20 characters</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char pass[20];
+    printf("enter pass (press enter to exit): ");
+    gets(pass);
+    printf("pass entered: %s",pass);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter pass (press enter to exit): secret123
+pass entered: secret123</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">20. Print counting 1 to 100 with 1-second delay</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main(){
+    int i;
+    for(i=1;i&lt;=100;i++){
+        printf("%d\n",i);
+        delay(1000);    
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>1-100 (1 sec delay)</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">21. Fibonacci series up to 100</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int a=0,b=1,c;
+    printf("%d %d ",a,b);
+    c=a+b;
+    while(c&lt;=100){
+        printf("%d ",c);
+        a=b;
+        b=c;
+        c=a+b;
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>0 1 1 2 3 5 8 13 21 34 55 89</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">22. Check if entered character is an alphabet</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char ch;
+    printf("enter char: ");
+    scanf(" %c",&amp;ch);
+    if((ch&gt;='a'&amp;&amp;ch&lt;='z')||(ch&gt;='A'&amp;&amp;ch&lt;='Z'))
+        printf("alphabet");
+    else
+        printf("not alphabet");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter char: a
+alphabet</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">23. Check palindrome number</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int n,t,r,s=0;
+    printf("enter no: ");
+    scanf("%d",&amp;n);
+    t=n;
+    while(n&gt;0){
+        r=n%10;
+        s=s*10+r;
+        n=n/10;
+    }
+    if(t==s)
+        printf("palindrome");
+    else
+        printf("not palindrome");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter no: 352
+not palindrome</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">24. Check Armstrong number</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int x,y=0,z,a;
+    printf("enter no: ");
+    scanf("%d",&amp;x);
+    a=x;
+    while(x&gt;0){
+        z=x%10;
+        y=y+(z*z*z);
+        x=x/10;
+    }
+    if(y==a)
+        printf("armstrong");
+    else
+        printf("not armstrong");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter no: 315
+not armstrong</pre>
+            </div>
+        </div>
+    </details>
+
+    <!-- TOPIC 5 -->
     <details>
         <summary>5. Iterative Loops - Nested Loops (1 Question)</summary>
         <div class="topic-content">
@@ -340,3 +1737,1137 @@ void main()
             </div>
         </div>
     </details>
+
+    <!-- TOPIC 6 -->
+    <details>
+        <summary>6. Single Dimension Array (13 Questions)</summary>
+        <div class="topic-content">
+            <div class="question-card">
+                <div class="question-title">1. Enter an array and display all values</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int array[5];
+    int i;
+    printf("Enter 5 values:\n");
+    for(i=0;i&lt;5;i++){
+        scanf("%d",&amp;array[i]);
+    }
+    printf("Printing array: ");
+    for(i=0;i&lt;5;i++){
+        printf("%d ",array[i]);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 5 values:
+1 2 3 4 5
+Printing array: 1 2 3 4 5</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">2. Enter array and print in reverse order</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int array[5];
+    int i;
+    printf("Enter 5 values:\n");
+    for(i=0;i&lt;5;i++){
+        scanf("%d",&amp;array[i]);
+    }
+    printf("Printing array in reverse: ");
+    for(i=4;i&gt;=0;i--){
+        printf("%d ",array[i]);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 5 values:
+1 2 3 4 5
+Printing array in reverse: 5 4 3 2 1</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">3. Copy array into second array</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int array1[5],array2[5];
+    int i;
+    printf("Enter 5 values:\n");
+    for(i=0;i&lt;5;i++){
+        scanf("%d",&amp;array1[i]);
+    }
+    for(i=0;i&lt;5;i++){
+        array2[i]=array1[i];
+    }
+    printf("Printing copied array: ");
+    for(i=0;i&lt;5;i++){
+        printf("%d ",array2[i]);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 5 values:
+1 2 3 4 5
+Printing copied array: 1 2 3 4 5</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">4. Copy array into another in reverse order</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int array1[5],array2[5];
+    int i;
+    printf("Enter 5 values:\n");
+    for(i=0;i&lt;5;i++){
+        scanf("%d",&amp;array1[i]);
+    }
+    for(i=0;i&lt;5;i++){
+        array2[i]=array1[5-1-i];
+    }
+    printf("Printing reverse copied array: ");
+    for(i=0;i&lt;5;i++){
+        printf("%d ",array2[i]);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 5 values:
+1 2 3 4 5
+Printing reverse copied array: 5 4 3 2 1</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">5. Print only even numbers in array</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int array[5];
+    int i;
+    printf("Enter 5 values:\n");
+    for(i=0;i&lt;5;i++){
+        scanf("%d",&amp;array[i]);
+    }
+    printf("Even numbers: ");
+    for(i=0;i&lt;5;i++){
+        if(array[i]%2==0)
+            printf("%d ",array[i]);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 5 values:
+1 2 3 4 5
+Even numbers: 2 4</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">6. Print only positive numbers in array</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int array[5];
+    int i;
+    printf("Enter 5 values:\n");
+    for(i=0;i&lt;5;i++){
+        scanf("%d",&amp;array[i]);
+    }
+    printf("Positive numbers: ");
+    for(i=0;i&lt;5;i++){
+        if(array[i]&gt;0)
+            printf("%d ",array[i]);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 5 values:
+1 -2 3 -4 -5
+Positive numbers: 1 3</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">7. Square all values in array</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int array[5];
+    int i;
+    printf("Enter 5 values:\n");
+    for(i=0;i&lt;5;i++){
+        scanf("%d",&amp;array[i]);
+    }
+    for(i=0;i&lt;5;i++){
+        array[i]=array[i]*array[i];
+    }
+    printf("Squared array: ");
+    for(i=0;i&lt;5;i++){
+        printf("%d ",array[i]);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 5 values:
+1 2 3 4 5
+Squared array: 1 4 9 16 25</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">8. Print only odd numbers in array</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int array[5];
+    int i;
+    printf("Enter 5 values:\n");
+    for(i=0;i&lt;5;i++){
+        scanf("%d",&amp;array[i]);
+    }
+    printf("Odd numbers: ");
+    for(i=0;i&lt;5;i++){
+        if(array[i]%2!=0)
+            printf("%d ",array[i]);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 5 values:
+1 2 3 4 5
+Odd numbers: 1 3 5</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">9. Add all values of array</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int array[5],i,sum=0;
+    printf("Enter 5 values:\n");
+    for(i=0;i&lt;5;i++){
+        scanf("%d",&amp;array[i]);
+    }
+    for(i=0;i&lt;5;i++){
+        sum=array[i]+sum;
+    }
+    printf("Sum of all values: %d",sum);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 5 values:
+1 2 3 4 5
+Sum of all values: 15</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">10. Linear search in array</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int array[5],i,c;
+    printf("Enter 5 values:\n");
+    for(i=0;i&lt;5;i++){
+        scanf("%d",&amp;array[i]);
+    }
+    printf("Enter value to search: ");
+    scanf("%d",&amp;c);
+    for(i=0;i&lt;5;i++){
+        if(array[i]==c){
+            printf("Found");
+            goto jump;
+        }
+    }
+    printf("not found");
+    jump:
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 5 values:
+1 2 3 4 5
+Enter value to search: 1
+Found</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">11. Sort array in ascending order</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int array[5],i,j,temp;
+    printf("Enter 5 values:\n");
+    for(i=0;i&lt;5;i++){
+        scanf("%d",&amp;array[i]);
+    }
+    for(i=0;i&lt;5;i++){
+        for(j=i+1;j&lt;5;j++){
+            if(array[i]&gt;array[j]){
+                temp=array[j];
+                array[j]=array[i];
+                array[i]=temp;
+            }
+        }
+    }
+    printf("Ascending order: ");
+    for(i=0;i&lt;5;i++){
+        printf("%d ",array[i]);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 5 values:
+1 4 3 5 2
+Ascending order: 1 2 3 4 5</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">12. Find maximum value of array</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int array[5],i,check;
+    printf("Enter 5 values:\n");
+    for(i=0;i&lt;5;i++){
+        scanf("%d",&amp;array[i]);
+    }
+    check=array[0];
+    for(i=1;i&lt;5;i++){
+        if(check&lt;array[i]) check=array[i];
+    }
+    printf("Maximum value: %d",check);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 5 values:
+1 2 3 4 5
+Maximum value: 5</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">13. Find minimum value of array</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    int array[5],i,check;
+    printf("Enter 5 values:\n");
+    for(i=0;i&lt;5;i++){
+        scanf("%d",&amp;array[i]);
+    }
+    check=array[0];
+    for(i=1;i&lt;5;i++){
+        if(check&gt;array[i]) check=array[i];
+    }
+    printf("Minimum value: %d",check);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 5 values:
+1 2 3 4 5
+Minimum value: 1</pre>
+            </div>
+        </div>
+    </details>
+
+    <!-- TOPIC 7 -->
+    <details>
+        <summary>7. Multi-Dimensional Array (5 Questions)</summary>
+        <div class="topic-content">
+            <div class="question-card">
+                <div class="question-title">1. Print 2x2 matrix</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main() {
+    int mat[2][2], i, j;
+    printf("Enter 4 numbers: ");
+    for(i=0;i&lt;2;i++){
+        for(j=0;j&lt;2;j++){
+            scanf("%d", &amp;mat[i][j]);
+        }
+    }
+    printf("Matrix:\n");
+    for(i=0;i&lt;2;i++){
+        for(j=0;j&lt;2;j++){
+            printf("%d\t", mat[i][j]);
+        }
+        printf("\n");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 4 numbers: 1 2 3 4
+Matrix:
+1       2
+3       4</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">2. Transpose 2x2 matrix</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main() {
+    int mat[2][2], trans[2][2], i, j;
+    printf("Enter 4 numbers for 2x2 matrix: ");
+    for(i=0;i&lt;2;i++){
+        for(j=0;j&lt;2;j++){
+            scanf("%d",&amp;mat[i][j]);
+            trans[j][i] = mat[i][j];
+        }
+    }
+    printf("Transpose Matrix:\n");
+    for(i=0;i&lt;2;i++){
+        for(j=0;j&lt;2;j++){
+            printf("%d\t", trans[i][j]);
+        }
+        printf("\n");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter 4 numbers for 2x2 matrix: 1 2 3 4      
+Transpose Matrix:
+1       3
+2       4</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">3. Add two 2x2 matrices</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main() {
+    int a[2][2], b[2][2], sum[2][2], i, j;
+    printf("Enter 4 numbers for first matrix: ");
+    for(i=0;i&lt;2;i++)
+        for(j=0;j&lt;2;j++)
+            scanf("%d",&amp;a[i][j]);
+    printf("Enter 4 numbers for second matrix: ");
+    for(i=0;i&lt;2;i++)
+        for(j=0;j&lt;2;j++)
+            scanf("%d",&amp;b[i][j]);
+    for(i=0;i&lt;2;i++)
+        for(j=0;j&lt;2;j++)
+            sum[i][j] = a[i][j] + b[i][j];
+    printf("Sum Matrix:\n");
+    for(i=0;i&lt;2;i++){
+        for(j=0;j&lt;2;j++)
+            printf("%d\t", sum[i][j]);
+        printf("\n");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Sum Matrix:
+2       4
+6       8</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">4. Subtract two 2x2 matrices</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main() {
+    int a[2][2], b[2][2], sub[2][2], i, j;
+    printf("Enter 4 numbers for first matrix: ");
+    for(i=0;i&lt;2;i++)
+        for(j=0;j&lt;2;j++)
+            scanf("%d",&amp;a[i][j]);
+    printf("Enter 4 numbers for second matrix: ");
+    for(i=0;i&lt;2;i++)
+        for(j=0;j&lt;2;j++)
+            scanf("%d",&amp;b[i][j]);
+    for(i=0;i&lt;2;i++)
+        for(j=0;j&lt;2;j++)
+            sub[i][j] = a[i][j] - b[i][j];
+    printf("Subtraction Matrix:\n");
+    for(i=0;i&lt;2;i++){
+        for(j=0;j&lt;2;j++)
+            printf("%d\t", sub[i][j]);
+        printf("\n");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Subtraction Matrix:
+0       0
+0       0</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">5. Multiply two 2x2 matrices</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main() {
+    int a[2][2], b[2][2], mul[2][2], i, j, k;
+    printf("Enter 4 numbers for first matrix: ");
+    for(i=0;i&lt;2;i++)
+        for(j=0;j&lt;2;j++)
+            scanf("%d",&amp;a[i][j]);
+    printf("Enter 4 numbers for second matrix: ");
+    for(i=0;i&lt;2;i++)
+        for(j=0;j&lt;2;j++)
+            scanf("%d",&amp;b[i][j]);
+    for(i=0;i&lt;2;i++){
+        for(j=0;j&lt;2;j++){
+            mul[i][j]=0;
+            for(k=0;k&lt;2;k++)
+                mul[i][j] += a[i][k]*b[k][j];
+        }
+    }
+    printf("Multiplication Matrix:\n");
+    for(i=0;i&lt;2;i++){
+        for(j=0;j&lt;2;j++)
+            printf("%d\t", mul[i][j]);
+        printf("\n");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Multiplication Matrix:
+7       10
+15      22</pre>
+            </div>
+        </div>
+    </details>
+
+    <!-- TOPIC 8 -->
+    <details>
+        <summary>8. Strings (19 Questions)</summary>
+        <div class="topic-content">
+            <div class="question-card">
+                <div class="question-title">1. Convert string to uppercase</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main(){
+    char str[50];
+    int i;
+    printf("Enter any sentence: ");
+    gets(str);
+    for(i=0;str[i];i++){
+        if(str[i]&gt;='a'&amp;&amp; str[i]&lt;='z'){
+            str[i]=str[i]-32;
+        }
+    }
+    printf("Uppercase: %s",str);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter any sentence: Hello World
+Uppercase: HELLO WORLD</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">2. Convert string to lowercase</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main(){
+    char str[50];
+    int i;
+    printf("Enter any sentence: ");
+    gets(str);
+    for(i=0;str[i];i++){
+        if(str[i]&gt;='A'&amp;&amp; str[i]&lt;='Z'){
+            str[i]=str[i]+32;
+        }
+    }
+    printf("Lowercase: %s",str);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter any sentence: SARAHH
+Lowercase: sarahh</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">3. Convert string to sentence case</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main(){
+    char str[50];
+    int i;
+    printf("Enter any sentence: ");
+    gets(str);
+    if(str[0]&gt;='a' &amp;&amp; str[0]&lt;='z') str[0]=str[0]-32;
+    for(i=1;str[i];i++){
+        if(str[i-1]=='.' &amp;&amp; str[i]&gt;='a' &amp;&amp; str[i]&lt;='z'){
+            str[i]=str[i]-32;
+        }
+    }
+    printf("Sentence case: %s",str);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter any sentence: abc. abc
+Sentence case: Abc. Abc</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">4. Convert string to title case</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main(){
+    char str[50];
+    int i;
+    printf("Enter any sentence: ");
+    gets(str);
+    if(str[0]&gt;='a' &amp;&amp; str[0]&lt;='z') str[0]=str[0]-32;
+    for(i=1;str[i];i++){
+        if((str[i-1]==' ' || str[i-1]=='.') &amp;&amp; str[i]&gt;='a'&amp;&amp; str[i]&lt;='z'){
+            str[i]=str[i]-32;
+        }
+    }
+    printf("Title case: %s",str);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter any sentence: abc def
+Title case: Abc Def</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">5. Convert string to toggle case</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char a[100];
+    int i;
+    printf("enter str: ");
+    gets(a);
+    for(i=0;a[i]!='\0';i++){
+        if(a[i]&gt;='a'&amp;&amp;a[i]&lt;='z') a[i]=a[i]-32;
+        else if(a[i]&gt;='A'&amp;&amp;a[i]&lt;='Z') a[i]=a[i]+32;
+    }
+    printf("toggle: %s",a);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter str: abc ABC
+toggle: ABC abc</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">6. Find length of string</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main(){
+    char str[50];
+    int l;
+    printf("Enter string: ");
+    gets(str);
+    l=strlen(str);
+    printf("Length: %d",l);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter string: abcde
+Length: 5</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">7. Compare two strings</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main(){
+    char str1[50],str2[50];
+    int l;
+    printf("Enter string 1: ");
+    gets(str1);
+    printf("Enter string 2: ");
+    gets(str2);
+    l=strcmp(str1,str2);
+    if(l==0) printf("Both strings are same");
+    else printf("Both strings are different");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter string 1: abc
+Enter string 2: def
+Both strings are different</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">8. Concatenate two strings</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main(){
+    char str1[50],str2[50];
+    printf("Enter string 1: ");
+    gets(str1);
+    printf("Enter string 2: ");
+    gets(str2);
+    strcat(str1,str2);
+    printf("Final string: %s",str1);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter string 1: abc
+Enter string 2: def
+Final string: abcdef</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">9. Copy one string to another</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main(){
+    char str1[50],str2[50];
+    printf("Enter string 1: ");
+    gets(str1);
+    strcpy(str2,str1);
+    printf("Copied string 2: %s",str2);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter string 1: hello
+Copied string 2: hello</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">10. Print character at specified index or print out of bound</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main(){
+    char str[50];
+    int l,d;
+    printf("Enter string: ");
+    gets(str);
+    l=strlen(str);
+    printf("Enter index: ");
+    scanf("%d",&amp;d);
+    if (d&lt;0) printf("Please enter positive number");
+    else if(d&lt;l) printf("%c",str[d]);
+    else printf("out of bound");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter string: hello
+Enter index: 1
+e</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">11. Print each character in a new line</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char str[50];
+    int i;
+    printf("Enter string: ");
+    gets(str);
+    for(i=0;str[i];i++){
+        printf("%c\n",str[i]);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter string: hi
+h
+i</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">12. Copy reverse of string into another string</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main(){
+    char str1[50],str2[50];
+    int i,l;
+    printf("Enter string 1: ");
+    gets(str1);
+    l=strlen(str1);
+    for(i=0;str1[i];i++){
+        str2[i]=str1[l-1-i];
+    }
+    str2[i]='\0';
+    printf("Reverse string 2: %s",str2);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter string 1: hello
+Reverse string 2: olleh</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">13. Print difference between each character of two strings</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char a[100],b[100];
+    int i;
+    printf("enter 1st str: ");
+    gets(a);
+    printf("enter 2nd str: ");
+    gets(b);
+    for(i=0;a[i]!='\0'&amp;&amp;b[i]!='\0';i++)
+        printf("%d ",a[i]-b[i]);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter 1st str: hello
+enter 2nd str: bye
+6 -20 7</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">14. Check if character exists in string</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char a[100],ch;
+    int i,found=0;
+    printf("enter str: ");
+    gets(a);
+    printf("enter char: ");
+    scanf("%c",&amp;ch);
+    for(i=0;a[i]!='\0';i++){
+        if(a[i]==ch){
+            found=1;
+            break;
+        }
+    }
+    if(found==1) printf("exist");
+    else printf("not exist");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter str: hello
+enter char: h
+exist</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">15. Print bound (index) of character if it exists</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char a[100],ch;
+    int i,found=-1;
+    printf("enter str: ");
+    gets(a);
+    printf("enter char: ");
+    scanf("%c",&amp;ch);
+    for(i=0;a[i]!='\0';i++){
+        if(a[i]==ch){
+            found=i;
+            break;
+        }
+    }
+    if(found!=-1) printf("bound %d",found);
+    else printf("not exist");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+enter str: hello
+enter char: e
+bound 1</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">16. Count vowels in string</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char str[50];
+    int i,v=0;
+    printf("Enter string: ");
+    gets(str);
+    for(i=0;str[i];i++){
+        if((str[i]=='a')||(str[i]=='e')||(str[i]=='i')||(str[i]=='o')||(str[i]=='u')||
+           (str[i]=='A')||(str[i]=='E')||(str[i]=='I')||(str[i]=='O')||(str[i]=='U'))
+            v+=1;
+    }
+    printf("Total vowels: %d",v);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter string: helloo
+Total vowels: 3</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">17. Print character on given bound number</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char str[50];
+    int b=0;
+    printf("Enter string: ");
+    gets(str);
+    printf("Enter bound: ");
+    scanf("%d",&amp;b);
+    printf("Character: %c",str[b]);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter string: hello
+Enter bound: 1
+Character: e</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">18. Check if string is palindrome</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main(){
+    char str1[50],str2[50];
+    int i,l;
+    printf("Enter word: ");
+    gets(str1);
+    l=strlen(str1);
+    for(i=0;str1[i];i++){
+        str2[i]=str1[l-1-i];
+    }
+    str2[i]='\0';
+    l=strcmp(str1,str2);
+    if(l==0) printf("That is a palindrome");
+    else printf("That is not a palindrome");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter word: sus
+That is a palindrome</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">19. Enter student record with details and 5 subject marks</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+void main(){
+    char name[25],roll[7],mark[5][3];
+    printf("Enter name: ");
+    gets(name);
+    printf("Enter roll number: ");
+    gets(roll);
+    printf("Enter marks of 5 subjects:\n");
+    printf("English: "); gets(mark[0]);
+    printf("Physics: "); gets(mark[1]);
+    printf("Chemistry: "); gets(mark[2]);
+    printf("Biology: "); gets(mark[3]);
+    printf("Physical Ed: "); gets(mark[4]);
+    printf("Submitted successfully.");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter name: sarah
+Enter roll number: 4213
+Enter marks of 5 subjects:
+English: 90
+Physics: 90
+Chemistry: 90
+Biology: 90
+Physical Ed: 90
+Submitted successfully.</pre>
+            </div>
+        </div>
+    </details>
+
+    <!-- TOPIC 9 -->
+    <details>
+        <summary>9. Structures (4 Questions)</summary>
+        <div class="topic-content">
+            <div class="question-card">
+                <div class="question-title">1. Employee structure with ID, Name, Designation in tabular format</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+struct employee {
+    int id;
+    char name[20];
+    char design[25];
+};
+
+int main() {
+    struct employee emp[50];
+    int i;
+    printf("Enter details of 50 employees:\n");
+    for (i = 0; i &lt; 50; i++) {
+        printf("\nEmployee %d:\n", i + 1);
+        printf("Enter ID: ");
+        scanf("%d", &amp;emp[i].id);
+        fflush(stdin);
+        printf("Enter Name: ");
+        scanf("%s", emp[i].name);
+        fflush(stdin);
+        printf("Enter Designation: ");
+        scanf("%s", emp[i].design);
+    }
+    printf("\n---------------------------------------------------------------\n");
+    printf("| %-5s | %-25s | %-20s |\n", "ID", "Name", "Designation");
+    printf("---------------------------------------------------------------\n");
+    for (i = 0; i &lt; 50; i++) {
+        printf("| %-5d | %-25s | %-20s |\n", emp[i].id, emp[i].name, emp[i].design);
+    }
+    printf("---------------------------------------------------------------\n");
+    return 0;
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+---------------------------------------------------------------
+| ID    | Name                      | Designation          |
+---------------------------------------------------------------
+| 101   | abc                       | Analyst              |
+---------------------------------------------------------------</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">2. Employee structure and print only names</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+struct employee {
+    int id;
+    char name[20];
+    char design[25];
+};
+
+void main() {
+    struct employee emp[50];
+    int i;
+    for (i = 0; i &lt; 50; i++) {
+        scanf("%d %s %s", &amp;emp[i].id, emp[i].name, emp[i].design);
+    }
+    for (i = 0; i &lt; 50; i++) {
+        printf("Employee %d. Name - %s\n", i+1, emp[i].name);
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Employee 1. Name - aaa
+Employee 2. Name - bbb</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">3. Employee structure and print ID and Name in table format</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+struct employee {
+    int id;
+    char name[20];
+    char design[25];
+};
+
+void main() {
+    struct employee emp[50];
+    int i;
+    for (i = 0; i &lt; 50; i++) {
+        scanf("%d %s %s", &amp;emp[i].id, emp[i].name, emp[i].design);
+    }
+    printf("\n--------------------------------------\n");
+    printf("| %-5s | %-25s  |\n", "ID", "Name");
+    printf("--------------------------------------\n");
+    for (i = 0; i &lt; 50; i++) {
+        printf("| %-5d | %-25s  |\n", emp[i].id, emp[i].name);
+    }
+    printf("--------------------------------------\n");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+--------------------------------------
+| ID    | Name                        |
+--------------------------------------
+| 101   | aaa                         |
+--------------------------------------</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">4. Student details sorted by roll number in ascending order</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+struct student {
+    int roll;
+    char name[20];
+    int fee;
+    char dob[20];
+};
+
+int main() {
+    struct student stu[5], temp;
+    int i, j;
+    for (i = 0; i &lt; 5; i++) {
+        printf("Enter Roll, Name, Fee, DOB: ");
+        scanf("%d %s %d %s", &amp;stu[i].roll, stu[i].name, &amp;stu[i].fee, stu[i].dob);
+    }
+    for (i = 0; i &lt; 4; i++) {
+        for (j = i + 1; j &lt; 5; j++) {
+            if (stu[i].roll &gt; stu[j].roll) {
+                temp = stu[i];
+                stu[i] = stu[j];
+                stu[j] = temp;
+            }
+        }
+    }
+    printf("\n-------------------------------------------------------------\n");
+    printf("| %-10s | %-15s | %-10s | %-12s |\n", "Roll No", "Name", "Fee", "DOB");
+    printf("-------------------------------------------------------------\n");
+    for (i = 0; i &lt; 5; i++) {
+        printf("| %-10d | %-15s | %-10d | %-12s |\n", stu[i].roll, stu[i].name, stu[i].fee, stu[i].dob);
+    }
+    printf("-------------------------------------------------------------\n");
+    return 0;
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+-------------------------------------------------------------
+| Roll No    | Name            | Fee        | DOB          |
+-------------------------------------------------------------
+| 4213       | s               | 10000      | 21-04-2007   |
+| 4444       | d               | 12000      | 15-08-2006   |
+-------------------------------------------------------------</pre>
+            </div>
+        </div>
+    </details>
+
+    <footer>
+        <p>Submitted By : SACHIN SINGH | BCA I YEAR</p>
+    </footer>
+
+</body>
+</html>
