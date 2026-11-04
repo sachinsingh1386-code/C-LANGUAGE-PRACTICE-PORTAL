@@ -203,7 +203,7 @@ void main() {
 void main(){
     int i;
     for(i=1;i&lt;=5;i++){
-        printf("abc");
+        printf("Sachin Singh");
         delay(500);
         clrscr();
         delay(500);
@@ -1296,11 +1296,11 @@ enter number: 123
 void main(){
     int i;
     for(i=1;i&lt;=100000;i++){
-        printf("priyanshi ");
+        printf("Sachin Singh ");
     }
 }</pre>
                 <div class="label">Output:</div>
-                <pre>priyanshi x1 lakh times</pre>
+                <pre>Sachin Singh x1 lakh times</pre>
             </div>
 
             <div class="question-card">
@@ -1858,7 +1858,7 @@ void main(){
     }
     printf("Even numbers: ");
     for(i=0;i&lt;5;i++){
-        if(array[i]%2==0)
+        if(array[i]%2!=0)
             printf("%d ",array[i]);
     }
 }</pre>
@@ -2694,7 +2694,7 @@ void main(){
 }</pre>
                 <div class="label">Output:</div>
                 <pre>
-Enter name: sarah
+Enter name: Sachin Singh
 Enter roll number: 4213
 Enter marks of 5 subjects:
 English: 90
@@ -2751,7 +2751,7 @@ int main() {
 ---------------------------------------------------------------
 | ID    | Name                      | Designation          |
 ---------------------------------------------------------------
-| 101   | abc                       | Analyst              |
+| 101   | Sachin                    | Analyst              |
 ---------------------------------------------------------------</pre>
             </div>
 
@@ -2778,8 +2778,8 @@ void main() {
 }</pre>
                 <div class="label">Output:</div>
                 <pre>
-Employee 1. Name - aaa
-Employee 2. Name - bbb</pre>
+Employee 1. Name - Sachin Singh
+Employee 2. Name - Amit Kumar</pre>
             </div>
 
             <div class="question-card">
@@ -2810,9 +2810,9 @@ void main() {
                 <div class="label">Output:</div>
                 <pre>
 --------------------------------------
-| ID    | Name                        |
+| ID    | Name                         |
 --------------------------------------
-| 101   | aaa                         |
+| 101   | Sachin Singh                 |
 --------------------------------------</pre>
             </div>
 
@@ -2858,9 +2858,529 @@ int main() {
 -------------------------------------------------------------
 | Roll No    | Name            | Fee        | DOB          |
 -------------------------------------------------------------
-| 4213       | s               | 10000      | 21-04-2007   |
-| 4444       | d               | 12000      | 15-08-2006   |
+| 4213       | Sachin Singh    | 10000      | 21-04-2007   |
+| 4444       | Rohan           | 12000      | 15-08-2006   |
 -------------------------------------------------------------</pre>
+            </div>
+        </div>
+    </details>
+
+    <!-- TOPIC 10: FILE HANDLING -->
+    <details>
+        <summary>10. File Handling (5 Questions)</summary>
+        <div class="topic-content">
+            <div class="question-card">
+                <div class="question-title">1. Write a program to copy the content of one file into another file.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void main()
+{
+    FILE *f_in, *f_out;
+    char c;
+    char info[250];
+
+    f_in = fopen("sachin_data.txt", "w");
+    if (f_in == NULL)
+    {
+        printf("Unable to create initial file\n");
+        exit(1);
+    }
+    printf("Enter string data: ");
+    scanf("%s", info);
+    fputs(info, f_in);
+    fclose(f_in);
+
+    f_in = fopen("sachin_data.txt", "r");
+    f_out = fopen("sachin_copy.txt", "w");
+    if (f_in == NULL || f_out == NULL)
+    {
+        printf("File opening error\n");
+        exit(1);
+    }
+
+    while ((c = fgetc(f_in)) != EOF)
+    {
+        fputc(c, f_out);
+    }
+
+    fclose(f_in);
+    fclose(f_out);
+
+    printf("File copied successfully");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter string data: SachinSingh
+File copied successfully</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">2. Write a program to create a file, write text, rename it with a new name and delete the old file.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void main()
+{
+    FILE *source_f, *target_f;
+    char initial_name[20], updated_name[20];
+    char c;
+
+    printf("Enter filename to make: ");
+    scanf("%s", initial_name);
+
+    source_f = fopen(initial_name, "w");
+    if (source_f == NULL)
+    {
+        printf("Failed to create file\n");
+        exit(1);
+    }
+
+    printf("Enter text line (press Enter to finish): ");
+    fflush(stdin);
+    while ((c = getchar()) != '\n')
+    {
+        fputc(c, source_f);
+    }
+    fclose(source_f);
+    printf("File '%s' successfully saved.\n", initial_name);
+
+    printf("Enter new name for renaming: ");
+    scanf("%s", updated_name);
+
+    source_f = fopen(initial_name, "r");
+    target_f = fopen(updated_name, "w");
+    if (source_f == NULL || target_f == NULL)
+    {
+        printf("Error reading/writing files\n");
+        exit(1);
+    }
+
+    while ((c = fgetc(source_f)) != EOF)
+    {
+        fputc(c, target_f);
+    }
+    fclose(source_f);
+    fclose(target_f);
+
+    if (remove(initial_name) == 0)
+        printf("File renamed from '%s' to '%s' successfully.\n", initial_name, updated_name);
+    else
+        printf("Error: Old file was not removed.\n");
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter filename to make: record.txt
+Enter text line (press Enter to finish): Sachin Singh BCA Student
+File 'record.txt' successfully saved.
+Enter new name for renaming: final_record.txt
+File renamed from 'record.txt' to 'final_record.txt' successfully.</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">3. Write a program to concatenate the contents of two files into a third file.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void main()
+{
+    FILE *ptrA, *ptrB, *ptrOut;
+    char fileA[40], fileB[40], fileC[40];
+    char buffer[250];
+    char ch;
+
+    printf("Enter first filename: ");
+    scanf("%s", fileA);
+    ptrA = fopen(fileA, "w");
+    if (ptrA == NULL)
+    {
+        printf("Failed to create first file\n");
+        exit(1);
+    }
+    printf("Enter text for first file: ");
+    scanf("%s", buffer);
+    fprintf(ptrA, "%s", buffer);
+    fclose(ptrA);
+
+    printf("Enter second filename: ");
+    scanf("%s", fileB);
+    ptrB = fopen(fileB, "w");
+    if (ptrB == NULL)
+    {
+        printf("Failed to create second file\n");
+        exit(1);
+    }
+    printf("Enter text for second file: ");
+    scanf("%s", buffer);
+    fprintf(ptrB, "%s", buffer);
+    fclose(ptrB);
+
+    printf("Enter destination file name: ");
+    scanf("%s", fileC);
+
+    ptrOut = fopen(fileC, "w");
+    ptrA = fopen(fileA, "r");
+    ptrB = fopen(fileB, "r");
+
+    if (ptrA == NULL || ptrB == NULL || ptrOut == NULL)
+    {
+        printf("Error opening files\n");
+        exit(1);
+    }
+
+    while ((ch = fgetc(ptrA)) != EOF)
+        fputc(ch, ptrOut);
+    fputc('\n', ptrOut);
+
+    while ((ch = fgetc(ptrB)) != EOF)
+        fputc(ch, ptrOut);
+
+    fclose(ptrA);
+    fclose(ptrB);
+    fclose(ptrOut);
+
+    printf("Files '%s' and '%s' concatenated into '%s' successfully.\n", fileA, fileB, fileC);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter first filename: part1.txt
+Enter text for first file: Sachin
+Enter second filename: part2.txt
+Enter text for second file: Singh
+Enter destination file name: merged.txt
+Files 'part1.txt' and 'part2.txt' concatenated into 'merged.txt' successfully.</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">4. Write a program to count number of characters in a file.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void main()
+{
+    FILE *myFile;
+    char fname[40];
+    char content[250];
+    char ch;
+    int total_chars = 0;
+
+    printf("Enter filename: ");
+    scanf("%s", fname);
+
+    myFile = fopen(fname, "w");
+    if (myFile == NULL)
+    {
+        printf("Cannot create file\n");
+        exit(1);
+    }
+    printf("Enter text: ");
+    scanf("%s", content);
+    fprintf(myFile, "%s", content);
+    fclose(myFile);
+
+    myFile = fopen(fname, "r");
+    if (myFile == NULL)
+    {
+        printf("Cannot open file\n");
+        exit(1);
+    }
+
+    while ((ch = fgetc(myFile)) != EOF)
+        total_chars++;
+
+    fclose(myFile);
+
+    printf("Number of characters in the file = %d\n", total_chars);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter filename: sachin_doc.txt
+Enter text: SachinSingh
+Number of characters in the file = 11</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">5. Write a program to count the number of words in a file.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void main()
+{
+    FILE *f;
+    char fname[40];
+    char content[250];
+    char ch;
+    int words = 0, state = 0;
+
+    printf("Enter filename: ");
+    scanf("%s", fname);
+
+    f = fopen(fname, "w");
+    if (f == NULL)
+    {
+        printf("Cannot create file\n");
+        exit(1);
+    }
+    printf("Enter text: ");
+    fflush(stdin);
+    gets(content);
+    fprintf(f, "%s", content);
+    fclose(f);
+
+    f = fopen(fname, "r");
+    if (f == NULL)
+    {
+        printf("Cannot open file\n");
+        exit(1);
+    }
+
+    while ((ch = fgetc(f)) != EOF)
+    {
+        if (ch == ' ' || ch == '\n' || ch == '\t')
+            state = 0;
+        else if (state == 0)
+        {
+            state = 1;
+            words++;
+        }
+    }
+    fclose(f);
+
+    printf("Number of words in the file = %d\n", words);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter filename: bio.txt
+Enter text: Sachin Singh C Practice Portal
+Number of words in the file = 5</pre>
+            </div>
+        </div>
+    </details>
+
+    <!-- TOPIC 11: RECURSION -->
+    <details>
+        <summary>11. Recursion (5 Questions)</summary>
+        <div class="topic-content">
+            <div class="question-card">
+                <div class="question-title">1. Write a program to print 'A' using recursion.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+
+void displayChar(int count)
+{
+    if (count &lt;= 0)
+        return;
+    printf("A ");
+    displayChar(count - 1);
+}
+
+void main()
+{
+    displayChar(6);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>A A A A A A</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">2. Write a program to print numbers from 1 to 5 using recursion.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+
+void printAscending(int val)
+{
+    if (val &gt; 5)
+        return;
+    printf("%d ", val);
+    printAscending(val + 1);
+}
+
+void main()
+{
+    printAscending(1);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>1 2 3 4 5</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">3. Write a program to print numbers from 5 to 1 using recursion.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+
+void printDescending(int val)
+{
+    if (val &lt; 1)
+        return;
+    printf("%d ", val);
+    printDescending(val - 1);
+}
+
+void main()
+{
+    printDescending(5);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>5 4 3 2 1</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">4. Write a program to print numbers using recursion without a base condition.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+
+void infiniteLoop(int num)
+{
+    printf("%d\n", num);
+    infiniteLoop(num);
+}
+
+void main()
+{
+    infiniteLoop(2);
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+2
+2
+2
+2
+... infinite recursion</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">5. Write a program to find the factorial of a number using recursion.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+
+long computeFactorial(int k)
+{
+    if (k &lt;= 1)
+        return 1;
+    return k * computeFactorial(k - 1);
+}
+
+void main()
+{
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &amp;number);
+    printf("Factorial of %d = %ld\n", number, computeFactorial(number));
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter a number: 6
+Factorial of 6 = 720</pre>
+            </div>
+        </div>
+    </details>
+
+    <!-- TOPIC 12: POINTER -->
+    <details>
+        <summary>12. Pointer (2 Questions)</summary>
+        <div class="topic-content">
+            <div class="question-card">
+                <div class="question-title">1. Write a program to enter 5 values in an array using pointer and print them.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+
+void main()
+{
+    int list[5];
+    int *ptr;
+    int k;
+
+    ptr = list;
+
+    for (k = 0; k &lt; 5; k++)
+    {
+        printf("Enter value for index %d: ", k);
+        scanf("%d", ptr + k);
+    }
+
+    printf("\nArray elements are:\n");
+    for (k = 0; k &lt; 5; k++)
+    {
+        printf("list[%d] = %d\n", k, *(ptr + k));
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter value for index 0: 12
+Enter value for index 1: 24
+Enter value for index 2: 36
+Enter value for index 3: 48
+Enter value for index 4: 60
+
+Array elements are:
+list[0] = 12
+list[1] = 24
+list[2] = 36
+list[3] = 48
+list[4] = 60</pre>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title">2. Write a program to enter values in a 2D array using a pointer and print the matrix.</div>
+                <div class="label">Code:</div>
+                <pre>
+#include &lt;stdio.h&gt;
+
+void main()
+{
+    int grid[2][3];
+    int *p;
+    int row, col;
+
+    p = &amp;grid[0][0];
+
+    for (row = 0; row &lt; 2; row++)
+    {
+        for (col = 0; col &lt; 3; col++)
+        {
+            printf("Enter element [%d][%d]: ", row, col);
+            scanf("%d", p + (row * 3 + col));
+        }
+    }
+
+    printf("\nThe 2D array is:\n");
+    for (row = 0; row &lt; 2; row++)
+    {
+        for (col = 0; col &lt; 3; col++)
+        {
+            printf("%d\t", *(p + (row * 3 + col)));
+        }
+        printf("\n");
+    }
+}</pre>
+                <div class="label">Output:</div>
+                <pre>
+Enter element [0][0]: 10
+Enter element [0][1]: 20
+Enter element [0][2]: 30
+Enter element [1][0]: 40
+Enter element [1][1]: 50
+Enter element [1][2]: 60
+
+The 2D array is:
+10	20	30
+40	50	60</pre>
             </div>
         </div>
     </details>
